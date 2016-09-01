@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function()
+{
+	var oBox=document.getElementById('box');
+	var aInput=oBox.getElementsByTagName('input');
+	var aDiv=oBox.getElementsByTagName('div');
+	for(var i=0;i<2;i++)
+	{
+	   aInput[i].index=i;
+	   aInput[i].onclick=function(){
+		for(var i=0;i<2;i++)
+	    {
+		   aInput[i].className='';
+		   aDiv[i].style.display='none';
+		}	
+		aInput[this.index].className='active';
+		aDiv[this.index].style.display='block';
+	   };
+	}
+	
+};
+</script>
+<style>
+body{
+	  padding:0px;
+	  margin:0px;
+	  border:0px;
+	  background:url(images/6302.jpg);	  
+	}
+	#box{
+		width:400px;
+		height:250px;
+		background:#CCC;
+		border:1px solid #000;
+		margin:100px  450px  ;
+		overflow:hidden;
+	}
+	#box div{
+		width:400px;
+		height:230px;
+		margin-top:0px;
+		/*border-top:1px solid #000;*/
+		background:#CCC;
+		display:none;
+		}
+    #box .active{
+		background:#F00;
+		}
+	#box div form{
+		display:block;
+		margin-left:80px;
+		
+		}
+</style>
+
+</head>
+
+<body>
+<div id="box">
+   <input type="button" value="登录" class="active" style="margin-left:100px;margin-top:10px;">&nbsp;&nbsp;&nbsp;&nbsp;
+   <input type="button" value="注册"  style="margin-left:100px;margin-top:10px;">
+   <div style="display:block;">
+   <h2 style="margin-left:150px;">用户登录</h2>
+      <form>
+      <table>
+        <tr>
+        <td>用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户:</td>
+        <td><input type="text" value=""></td>
+        </tr>
+        <tr>
+        <td>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
+        <td><input type="password" value="" maxlength="16"></td>
+        </tr>
+        <td>确认密码:</td>
+        <td><input type="password" value="" maxlength="16"></td>
+        </tr>
+      </table>
+      <center style="margin-left:-100px;margin-top:20px;">
+         <a href="论坛01.html"><input type="button" value="登录"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="reset" value="重置">
+      </center>
+      </form>
+   </div>
+   <div>
+      <h2 style="margin-left:150px;">欢迎加入</h2>
+      <form>
+      <table border="0">
+        <tr>
+        <td>用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户:</td>
+        <td><input type="text" value=""></td>
+        </tr>
+        <tr>
+        <td>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码:</td>
+        <td><input type="password" value="" maxlength="16"></td>
+        </tr>
+        <td>确认密码:</td>
+        <td><input type="password" value="" maxlength="16"></td>
+        </tr>
+      </table>
+      <center style="margin-left:-100px;margin-top:20px;">
+         <a href="论坛01.html"><input type="button" value="注册" ></a>&nbsp;&nbsp;&nbsp;&nbsp;
+         <input type="reset" value="重置">
+      </center>
+      </form>
+   </div>
+</div>
+</body>
+</html>
