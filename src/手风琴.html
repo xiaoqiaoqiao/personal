@@ -1,0 +1,170 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+#box {
+	width:390px;
+	height:200px;
+	background:#CCC;
+	position:relative;
+	left:500px;
+	}
+#first{
+	width:300px;
+	height:200px;
+	background:url(images/4.jpg);
+	position:absolute;
+	float:left;
+	left:90px;
+	top:0px;
+	}
+#first span{
+	width:29px;
+	height:200px;
+	background:#C0F;
+	display:block;
+	line-height:65px;
+	border-right:1px solid #000;
+	position:absolute;
+	text-align:center;
+	float:left;
+	right:0px;
+	top:0px;
+	}
+#second{
+	width:300px;
+	height:200px;
+	background:url(images/1.jpg);
+	position:absolute;
+	float:left;
+	left:60px;
+	top:0px;
+	}
+#second span{
+	width:29px;
+	height:200px;
+	background:#C0F;
+	display:block;
+	line-height:65px;
+	border-right:1px solid #000;
+	position:absolute;
+	text-align:center;
+	float:left;
+	right:0px;
+	top:0px;
+	}
+#third{
+	width:300px;
+	height:200px;
+	background:url(images/2.jpg);
+	position:absolute;
+	float:left;
+	left:30px;
+	top:0px;
+	}
+#third span{
+	width:29px;
+	height:200px;
+	background:#C0F;
+	display:block;
+	line-height:65px;
+	border-right:1px solid #000;
+	position:absolute;
+	text-align:center;
+	float:left;
+	right:0px;
+	top:0px;
+	}
+#fourth{
+	width:300px;
+	height:200px;
+	background:url(images/7.jpg);
+	position:absolute;
+	float:left;
+	left:0px;
+	top:0px;
+	}
+#fourth span{
+	width:29px;
+	height:200px;
+	background:#C0F;
+	display:block;
+	line-height:65px;
+	border-right:1px solid #000;
+	position:absolute;
+	text-align:center;
+	float:left;
+	right:0px;
+	top:0px;
+	}
+</style>
+<script>
+window.onload=function()
+{
+	var oDiv=document.getElementById('box');
+	var aDiv=oDiv.getElementsByTagName('div');
+	var m=aDiv.length;	
+	var n=29;
+	for(var i=0;i<m;i++){   
+		aDiv[i].index=i;
+		aDiv[i].onclick=function(){
+			if(n==29){
+				for(var j=m;j>=this.index;j--)
+				{
+					sport(timer,aDiv[j],29);	
+				}	
+			}
+			else if(n==300){
+				for(j=0;j<=this.index;j++){
+					sport(timer,aDiv[j],300);	
+				}
+			}
+			if(aDiv[this.index].offsetWidth==29){
+				n=300;
+			}
+			if(aDiv[this.index].offsetWidth==300){
+				n=29;
+			}
+			
+	    };	
+	}
+};
+var timer=null;
+function sport(timer,obj,end)
+{
+	clearInterval(timer);
+	var	 speed=0;
+		
+	timer=setInterval(function(){
+		speed=(end-obj.offsetWidth)/10;
+	    speed=speed>0?Math.ceil(speed):Math.floor(speed);
+		if(obj.offsetWidth==end){
+			clearInterval(timer);
+		}
+		else{
+			obj.style.width=obj.offsetWidth+speed+'px';
+		}
+	},30);
+		
+}
+</script>
+</head>
+
+<body>
+<div id="box">
+      
+    <div id="first"><span>第一个</span></div>
+    <div id="second"><span>第二个</span></div>
+    <div id="third"><span>第三个</span></div>
+    <div id="fourth"><span>第四个</span></div>
+    
+</div>
+</body>
+</html>
