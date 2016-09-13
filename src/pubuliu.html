@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload=function(){
+	var oBox=document.getElementById('box');
+	var aDiv=oBox.getElementsByTagName('div');
+	var aImg=oBox.getElementsByTagName('img');  //
+	
+	document.onmousewheel=function(){
+		
+		//alert('hello');
+		for(var i=0;i<aDiv.length;i++){
+			var oImg=document.createElement('img');
+			aDiv[i].appendChild(oImg);
+			
+			oImg.style.width=190+'px';
+			oImg.style.height=Math.random()*1000000%201+80+'px';
+			//oImg.style.height=Math.random()*300+'px';
+			//alert('oImg.length');
+			//if(oImg.offsetHeight<=100+'px')
+			//{	
+				//aDiv[this].removeChild(oImg);
+			
+			//}
+			oImg.src='images/'+Math.ceil(Math.random()*16)+'.jpg'; 
+			
+			for(var j=0;j<aImg.length;j++){
+				aImg[j].index=j;
+				aImg[j].onmouseover=function(){
+					aImg[this.index].className='active';
+				};
+				aImg[j].onmouseout=function(){
+					aImg[this.index].className='';
+				};
+			
+			}
+		}
+		
+	};
+};
+
+</script>
+<style>
+#box{ width:1100px;
+	height:600px;
+	position:relative;
+	
+	margin:auto;}
+#box div{ width:200px;
+	  height:600px;
+	  margin:2px;
+	  float:left;
+	  border-left:0px solid #000;}
+img{width:190px;
+	opacity:0.8;
+		 border:5px solid #CCC;}
+.active{ transform:scale(1.2);
+		 border:5px solid #FF3;
+		 border-radius:10px;
+		 opacity:1;		  
+		}
+
+</style>
+</head>
+<body>
+
+<div id="box">
+	<div><img src="images/1.jpg"></div>
+    <div><img src="images/2.jpg"></div>
+    <div><img src="images/3.jpg"></div>
+    <div><img src="images/4.jpg"></div>
+    <div><img src="images/5.jpg"></div>
+</div>
+</body>
+</html>
