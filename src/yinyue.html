@@ -1,0 +1,691 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>栋力音乐坊</title>
+<style>
+*{ margin:0px;
+   padding:0px;
+   border:0px;}
+body{ font-family:"宋体";
+	  font-size:12px;
+	  color:#000;
+	  text-align:center;
+	  background-image:url(images/bg.jpg);
+	  background-repeat:repeat-x;}
+.title{ line-height:28px;
+		font-weight:bold;
+		color:#FFF;
+		font-size:12px;
+		}
+.left_zi_3_1_zi{ margin-left:10px;}
+.yellow{ color:#F30;}
+.bule{ color:#03F;}
+.green{ color:#6F0;}
+#menu_t{ width:811px;
+		 height:31px;
+		 background:#9F3;
+		 position:absolute;
+		 top:139px;
+		 left:269px;
+		 background-image:url(images/702.gif);}/*顶部菜单*/
+#menu_t ul{ list-style:none;}
+#menu_t ul li{ width:90px;
+			   line-height:31px;
+			   float:left;}
+#Box{ width:1003px;
+	  /*border:1px solid #FF0;*/
+	  /*background:#000;*/
+	  margin:auto;}
+	  #top1{ width:998px;
+	  		 height:149px;
+			 /*background:#F9F;*/
+			 margin-left:2px;
+			 /*border:0px solid;*/
+			 background-image:url(images/701.jpg);
+	  background-repeat:repeat-x;}
+			 /*最上插图*/
+	  #top2{ width:755px;
+	  		 height:36px;
+			 /*background:#FC9;*/
+			 margin:auto;
+			 padding-top:10px;
+			 padding-right:56px;
+			 margin-top:20px;}
+			 /*制作搜索*/
+	  #left{ width:224px;
+	  		 height:1310px;
+			 /*background:#3F0;*/
+			 float:left;
+			 text-align:left;}
+			 /*左列*/
+			 #left_tu1{ width:204px;
+			 		   height:28px;
+					   /*background:#9CC;*/
+					   padding-left:20px;
+					   background-image:url(images/703.gif);}/*栋力公告*/
+			 #left_zi_1{ width:198px;
+			 			 height:89px;
+						 /*background:#F0C;*/
+						 padding-top:8px;
+						 padding-left:12px;
+						 padding-bottom:12px;
+						 padding-right:12px;
+						 border-left:1px solid #CCC;
+						 border-right:1px solid #CCC;
+						 border-bottom:1px solid #CCC;
+						 line-height:18px;}
+			 #left_tu2{ width:204px;
+			 		   height:28px;
+					   /*background:#9CC;*/
+					   padding-left:20px;
+					   background-image:url(images/704.gif);}/*栋力推荐单曲*/			 
+			 #left_zi_2{ width:196px;
+			 			 height:265px;
+						 /*background:#F0C;*/
+						 padding-left:13px;
+						 padding-bottom:10px;
+						 padding-right:13px;
+						 padding-top:8px;
+						 border-left:1px solid #CCC;
+						 border-right:1px solid #CCC;
+						 border-bottom:1px solid #CCC;}
+						 #left_zi_2 dt{ float:left;
+						 				width:117px;
+										line-height:23px;
+										border-bottom:dashed 1px #333333;
+										text-align:left;
+										text-indent:8px;
+										background-image:url(images/714.gif);
+										background-repeat:no-repeat;
+										background-position:0px 8px;}/*列表左边*/
+						 #left_zi_2 dd{ float:left;
+						 				width:65px;
+										line-height:23px;
+										border-bottom:dashed 1px #333333;
+										text-align:left;}/*列表右边*/
+										#left_zi_2 img{ float:right;
+														margin-right:15px;
+														margin-top:12px;}
+			 #left_tu3{ width:204px;
+			 		   height:28px;
+					   /*background:#9CC;*/
+					   padding-left:20px;
+					   background-image:url(images/705.gif);
+					   }/*音乐人气之星*/	
+					   
+					   	 
+			 #left_zi_3{ width:215px;
+			 			 height:440px;
+						/* background:#F0C;*/
+						 padding-left:3px;
+						 padding-bottom:9px;
+						 padding-right:4px;
+						 padding-top:13px;
+						 border-left:1px solid #CCC;
+						 border-right:1px solid #CCC;
+						 border-bottom:1px solid #CCC;
+						 line-height:25px;
+						 }
+						 #left_zi_3_1{ width:199px;
+					   				 height:83px;
+									/* background:#09C;*/
+									 border:1px dashed #000000;
+									 padding-left:14px;}/*音乐人气之星第一个图*/	
+						 .left_zi_3_1{ width:199px;
+					   				 height:83px;
+									 /*background:#09C;*/
+									 border:1px dashed #000000;
+									 padding-left:14px;
+									 margin-top:6px;}/*音乐人气之星其余图*/	
+									 #left_zi_3 img{ float:left;}
+							
+			 #left_tu4{ width:204px;
+			 		   height:28px;
+					   /*background:#9CC;*/
+					   padding-left:20px;
+					   background-image:url(images/703.gif);}/*曲库统计*/			 
+			 #left_zi_4{ width:198px;
+			 			 height:92px;
+						 /*background:#F0C;*/
+						 padding-left:12px;
+						 padding-bottom:8px;
+						 padding-right:12px;
+						 padding-top:8px;
+						 border-left:1px solid #CCC;
+						 border-right:1px solid #CCC;
+						 border-bottom:1px solid #CCC;
+						 line-height:18px;}
+			 #left_zi_5{ width:194px;
+			 			 height:105px;
+						/* background:#F6C;*/
+						 margin-top:30px;
+						 margin-left:auto;
+						 margin-right:auto;}/*插图*/		
+						  #left_zi_5 img{ margin-bottom:13px;}		 			 
+	  #mid{ width:640px;
+	  		height:1310px;
+			/*background:#C00;*/
+			float:left;
+			text-align:left;}
+			/*中列*/
+			#mid_hot{ width:640px;
+					  height:166px;
+					  /*background:#FF0;*/
+					  text-align:center;
+					  line-height:23px;}/*hot*/
+					  #mid_hot_title{ width:620px;
+					  				  height:28px;
+									  /*background:#C6C*/;
+									  padding-left:20px;
+									  background-image:url(images/706.gif);}/*title*/
+					  #mid_hot_tu1{ width:90px;
+					  			   height:124px;
+								   /*background:#C0F;*/
+								   margin-top:14px;
+								   margin-left:5px;
+								   float:left;}/*第一个图*/
+					  .mid_hot_tu{ width:90px;
+					  			   height:124px;
+								   /*background:#3CC;*/
+								   margin-top:14px;
+								   float:left;}/*剩下的图*/	
+								   #mid_hot img{ margin-left:10px;}		   				 
+			#mid_tu{ width:640px;
+					 height:84px;
+					/* background:#FC9;*/
+					 background-image:url(images/724.gif);}/**/
+			#mid_yc{ width:426px;
+					 height:284px;
+					 /*background:#F99;*/
+					 float:left;
+					 line-height:20px;}/*最近原唱更新*/
+					 #mid_yc_title{ width:406px;
+					 				height:28px;
+									/*background:#0F0;*/
+									padding-left:20px;
+									background-image:url(images/707.gif);}/*title*/
+					 .mid_yc_content{ width:200px;
+					 				  height:65px;
+									  /*background:#9F0;*/
+									  margin-top:5px;
+									  padding-left:13px;
+									  padding-top:10px;
+									  float:left;}
+									  #mid_yc img{ float:left;}				
+			#mid_sc{ width:212px;
+					 height:284px;
+					 margin-left:2px;
+					 /*background:#F9F;*/
+					 float:left;}/*最新上传歌曲*/
+					 #mid_sc_title{ width:192px;
+					 				height:28px;
+									/*background:#0F0;*/
+									padding-left:20px;
+									background-image:url(images/708.gif);}/*title*/
+					 #mid_sc_content{ width:194px;
+					 				  height:240px;
+									 /* background:#FFC;*/
+									  padding:8px;
+									  text-align:left;}	/*最新上传歌单*/
+									  #mid_sc_content dt{ width:112px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  text-indent:16px;
+														  background-image:url(images/727.gif);
+														  background-repeat:no-repeat;
+														  background-position:0px 5px;} 
+									  #mid_sc_content dd{ width:60px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  color:#FC0;} 					  			
+			#mid_dq{ clear:both;
+					 width:212px;
+					 height:294px;
+					 margin-top:3px;
+					 /*background:#F39;*/
+					 float:left;}/*单曲排行*/
+					 #mid_dq_title{ width:192px;
+					 				height:28px;
+									/*background:#0F0;*/
+									padding-left:20px;
+									background-image:url(images/708.gif);}/*title*/
+					 #mid_dq_content{ width:194px;
+					 				  height:250px;
+									  /*background:#FFC;*/
+									  padding:8px;}/*单曲排行歌单*/
+									  #mid_dq_content dt{ width:112px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  text-indent:16px;
+														  background-image:url(images/728.gif);
+														  background-repeat:no-repeat;
+														  background-position:0px 5px;} 
+									  #mid_dq_content dd{ width:60px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  color:#FC0;} 						
+			#mid_zj{ width:212px;
+					 height:294px;
+					 margin-top:3px;
+					/* background:#F93;*/
+					 float:left;
+					 margin-left:2px;}/*专辑排行*/
+					 #mid_zj_title{ width:192px;
+					 				height:28px;
+									/*background:#0F0;*/
+									padding-left:20px;
+									background-image:url(images/709.gif);}/*title*/
+					 #mid_zj_content{ width:194px;
+					 				  height:250px;
+									 /* background:#FFC;*/
+									  padding:8px;}/*专辑排行歌单*/
+									  #mid_zj_content dt{ width:112px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  text-indent:16px;
+														  background-image:url(images/729.gif);
+														  background-repeat:no-repeat;
+														  background-position:0px 5px;} 
+									  #mid_zj_content dd{ width:60px;
+									  					  line-height:23px;
+														  border-bottom:dotted 1px #CCCCCC;
+														  float:left;
+														  color:#00C;} 						
+			#mid_tj{ width:212px;
+					 height:261px;
+					 margin-top:3px;
+					/* background:#FF3;*/
+					 float:left;
+					 margin-left:2px;
+					line-height:20px;}/*栋力推荐专辑*/	
+					 #mid_tj_title{ width:192px;
+					 				height:28px;
+									/*background:#0F0;*/
+									padding-left:20px;
+									background-image:url(images/710.gif);}/*title*/
+					 #mid_tj_content{ width:184px;
+					 				  height:65px;
+									  /*background:#3FF;*/
+									  margin-top:10px;
+									  margin-left:10px;
+									  padding-top:5px;}
+					 .mid_tj_content{ width:184px;
+					 				  height:65px;
+									  /*background:#3FF;*/
+									  padding-top:5px;
+									  margin-left:10px;}
+									  #mid_tj img{ float:left;}				  
+			#mid_yp{ clear:both;
+					 width:620px;
+					 height:28px;
+					 /*background:#CF3;*/
+					 padding-left:20px;
+					 background-image:url(images/711.gif);}/*最新乐评*/
+			.mid_yp1{ width:625px;
+					 height:74px;
+					 /*background:#3C6;*/
+					 margin-left:7px;
+					 padding-top:17px;
+					 padding-bottom:13px;
+					 border-bottom:1px dashed #000000;
+					 line-height:20px;}/*最新乐评内容*/ 	
+					 .mid_yp1 img{ float:left;}			 	 			 
+	  #right{ width:135px;
+	  		  height:379px;
+			  /*background:#006;*/
+			  float:left;
+			  background-image:url(images/734.jpg);}
+			  /*播放按钮*/
+	  #bottom{ clear:both;
+	  		   width:1003px;
+			   height:102px;
+			  /* background:#03F;*/
+			   text-align:center;
+			   line-height:20px;
+			   background-image:url(images/712.gif);}
+			   /*底部版权*/
+			   #menu_b{ width:811px;
+		 				height:31px;
+		 				/*background:#9F3;*/
+						margin:auto;
+						background-image:url(images/702.gif);}
+				        /*底部菜单*/
+					#menu_b ul{ list-style:none;}
+					#menu_b ul li{ width:90px;
+			  					   line-height:31px;
+			  					   float:left;}
+</style>
+</head>
+
+<body>
+	<div id="menu_t">
+    	<ul>
+        	<li>首页音乐</li>
+            <li>最新更新</li>
+            <li>栋力推荐</li>
+            <li>栋力排行</li>
+            <li>栋力曲库</li>
+            <li>音乐坊</li>
+            <li>音乐论坛</li>
+            <li>今日排行</li>
+            <li>上传歌曲</li>
+        </ul>
+    </div>
+	<div id="Box">
+    	<div id="top1"></div>
+        <div id="top2"></div>
+        <div id="left">
+        	<div id="left_tu1">
+            	<span class="title">栋力公告</span>
+            </div>
+            <div id="left_zi_1">
+            	欢迎光临栋力无限音乐站！本网站所有歌曲均来自互联网，欢迎用户上传歌曲的<font color="#FF0000">Lrc</font>格式歌词，所有用户在登录后上传的歌词在播放时将显示歌词上传者。
+            </div>
+            <div id="left_tu2">
+            	<span class="title">栋力推荐单曲</span>
+            </div>
+            <div id="left_zi_2">
+            	<dt>隐形的翅膀</dt>
+                <dd>张韶涵</dd>
+                <dt>离歌</dt>
+                <dd>信乐团</dd>
+                <dt>胡说胡有理</dt>
+                <dd>花儿乐队</dd>
+                <dt>亲爱的</dt>
+                <dd>徐若瑄</dd>
+                <dt>忘不了</dt>
+                <dd>陶吉吉</dd>
+                <dt>飞行部落</dt>
+                <dd>飞儿乐队</dd>
+                <dt>触电</dt>
+                <dd>S.H.E</dd>
+                <dt>一千零一夜</dt>
+                <dd>蜜雪薇琪</dd>
+                <dt>千里之外</dt>
+                <dd>周杰伦</dd>
+                <dt>原来刘</dt>
+                <dd>刘芮伊</dd>
+                <img src="images/715.gif">
+            </div>
+            <div id="left_tu3">
+            	<span class="title">音乐人气之星</span>
+            </div>
+            <div id="left_zi_3">
+            	<div id="left_zi_3_1">
+                	<img src="images/716.gif">
+                    <span class="left_zi_3_1_zi">名称：</span><span class="bule">未命名</span><br/>
+                    <span class="left_zi_3_1_zi">主人：</span>未命名</br>
+                    <span class="left_zi_3_1_zi">点击：</span><span class="yellow">一次</span>
+                </div>
+                <div class="left_zi_3_1">
+                	<img src="images/717.gif">
+                    <span class="left_zi_3_1_zi">名称：</span><span class="bule">意犹未尽</span><br/>
+                    <span class="left_zi_3_1_zi">主人：</span>未命名</br>
+                    <span class="left_zi_3_1_zi">点击：</span><span class="yellow">一次</span>
+                </div>
+                <div class="left_zi_3_1">
+                	<img src="images/716.gif">
+                    <span class="left_zi_3_1_zi">名称：</span><span class="bule">未命名</span><br/>
+                    <span class="left_zi_3_1_zi">主人：</span>未命名</br>
+                    <span class="left_zi_3_1_zi">点击：</span><span class="yellow">一次</span>
+                </div>
+                <div class="left_zi_3_1">
+                	<img src="images/716.gif">
+                	<span class="left_zi_3_1_zi">名称：</span><span class="bule">顽固</span><br/>
+                    <span class="left_zi_3_1_zi">主人：</span>未命名</br>
+                    <span class="left_zi_3_1_zi">点击：</span><span class="yellow">一次</span>
+                </div>
+                <div class="left_zi_3_1">
+                	<img src="images/717.gif">
+                	<span class="left_zi_3_1_zi">名称：</span><span class="bule">sb.sth</span><br/>
+                    <span class="left_zi_3_1_zi">主人：</span>未命名</br>
+                    <span class="left_zi_3_1_zi">点击：</span><span class="yellow">一次</span>
+                </div>
+            </div>
+            <div id="left_tu4">
+            	<span class="title">曲库统计</span>
+            </div>
+            <div id="left_zi_4">
+                 歌手：1276位</br>专辑：3918张</br>歌曲：51219首</br>最近更新于</br>：	2007-03-13 18:10:32 
+            </div>
+            <div id="left_zi_5">
+            	<img src="images/718.gif">
+                <img src="images/719.gif">
+            </div>
+        </div>
+        <div id="mid">
+        	<div id="mid_hot">
+            	<div id="mid_hot_title">
+                	<span class="title">最新门专辑 Hot Albums </span>
+                </div>
+                <div id="mid_hot_tu1">
+                	<img src="images/720.gif">
+                	潘多拉</br><span class="green">张韶涵</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/721.gif">
+                	英文歌曲1</br><span class="green">无名</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/722.gif">
+                	知足</br><span class="green">五月天</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/721.gif">
+                	blue plane</br><span class="green">Donnal</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/721.gif">
+                	在你身边</br><span class="green">张学友</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/720.gif">
+                	我们都是好孩子</br><span class="green">王争</span>
+                </div>
+                <div class="mid_hot_tu">
+                	<img src="images/723.gif">
+                	见习爱神</br><span class="green">Twins</span>
+                </div>
+            </div>
+            <div id="mid_tu"></div>
+            <div id="mid_yc">
+            	<div id="mid_yc_title">
+             		<span class="title">最近原唱更新</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/725.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《笑忘书》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-13</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">张敬轩</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/726.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《放开》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-12</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">信乐团</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/726.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《朋友难当》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-12</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">羽泉</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/725.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《给自己情书》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-11</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">梁咏琪</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/725.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《在你身边》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-11</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">张学友</span>
+                </div>
+                <div class="mid_yc_content">
+                	<img src="images/725.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《Thank You》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-11</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">Declan</span>
+                </div>
+            </div>
+            <div id="mid_sc">
+            	<div id="mid_sc_title">
+                	<span class="title">最新上传歌曲</span>
+                </div>
+                <div id="mid_sc_content">
+                	<dt>晓之车</dt>
+                    <dd>有感情的歌</dd>
+                    <dt>在你身边</dt>
+                    <dd>有感情的歌</dd>
+                    <dt>My Love My D...</dt>
+                    <dd>sb.sth</dd>
+                    <dt>冷战</dt>
+                    <dd>sb.sth</dd>
+                    <dt>完整演出</dt>
+                    <dd>sb.sth</dd>
+                    <dt>解脱</dt>
+                    <dd>sb.sth</dd>
+                    <dt>文成公主</dt>
+                    <dd>sb.sth</dd>
+                    <dt>部落格</dt>
+                    <dd>sb.sth</dd>
+                    <dt>我懂</dt>
+                    <dd>sb.sth</dd>
+                    <dt>既然你问起</dt>
+                    <dd>sb.sth</dd>
+                </div>
+            </div>
+            <div id="mid_dq">
+            	<div id="mid_dq_title">
+                	<span class="title">单曲排行</span>
+                </div>
+                <div id="mid_dq_content">
+                	<dt>认真的雪</dt>
+                    <dd>薛之谦</dd>
+                    <dt>寓言</dt>
+                    <dd>张韶涵</dd>
+                    <dt>孙悟空</dt>
+                    <dd>五月天</dd>
+                    <dt>香水百合</dt>
+                    <dd>张韶涵</dd>
+                    <dt>美丽的插曲</dt>
+                    <dd>萧亚轩</dd>
+                    <dt>见习爱神</dt>
+                    <dd>Twins</dd>
+                    <dt>波斯猫</dt>
+                    <dd>S.H.E</dd>
+                    <dt>白月光</dt>
+                    <dd>张信哲</dd>
+                    <dt>就是你</dt>
+                    <dd>范玮琪</dd>
+                    <dt>我们都是</dt>
+                    <dd>王争</dd>
+                </div>
+            </div>
+            <div id="mid_zj">
+            	<div id="mid_zj_title">
+                	<span class="title">专辑排行</span>
+                </div>
+                <div id="mid_zj_content">
+                	<dt>《每首都是...》</dt>
+                    <dd>杂锦合辑</dd>
+                    <dt>《首选萧亚轩》</dt>
+                    <dd>萧亚轩</dd>
+                    <dt>《超级精选》</dt>
+                    <dd>小虎队</dd>
+                    <dt>《在你身边》</dt>
+                    <dd>张学友</dd>
+                    <dt>《保利金30年》</dt>
+                    <dd>获奖作品</dd>
+                    <dt>《给自己的...》</dt>
+                    <dd>梁咏琪</dd>
+                    <dt>《潘多拉》</dt>
+                    <dd>张韶涵</dd>
+                    <dt>《情歌对唱》</dt>
+                    <dd>付笛生</dd>
+                    <dt>《至少还有你》</dt>
+                    <dd>林忆莲</dd>
+                    <dt>《奇幻旅程》</dt>
+                    <dd>S.H.E</dd>
+                </div>
+            </div>
+            <div id="mid_tj">
+            	<div id="mid_tj_title">
+                	<span class="title">栋力推荐专辑</span>
+                </div>
+                <div id="mid_tj_content">
+                	<img src="images/730.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《亲亲》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-10</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">梁静茹</span>
+                </div>
+                <div class="mid_tj_content">
+                	<img src="images/731.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《The One》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-10</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">张靓颖</span>
+                </div>
+                <div class="mid_tj_content">
+                <img src="images/731.gif">
+                	<span class="left_zi_3_1_zi">专辑：</span><span class="bule">《爱邓...》</span></br>
+                    <span class="left_zi_3_1_zi">更新：</span>2007-03-10</br>
+                    <span class="left_zi_3_1_zi">歌手：</span><span class="bule">张靓颖</span>
+                </div>
+            </div>
+            <div id="mid_yp">
+            	<span class="title">最新乐评</span>
+            </div>
+            <div class="mid_yp1">
+            	<img src="images/732.gif">
+            	<span class="left_zi_3_1_zi"><span class="yellow">《每首都是主打~~》</span></span></br>
+				<span class="left_zi_3_1_zi"><span class="bule">Iuoyufei</span></span></br>
+				<span class="left_zi_3_1_zi">发几张babyface的专辑吧！！！超级喜欢他的曲风</span>
+            </div>
+            <div class="mid_yp1">
+            	<img src="images/733.gif">
+            	<span class="left_zi_3_1_zi"><span class="yellow">《莫文蔚精选辑》</span></span></br>
+				<span class="left_zi_3_1_zi"><span class="bule">jecci</span></span></br>
+				<span class="left_zi_3_1_zi">喜剧之王里的“the way you make me feel”谁有国语版啊？</span>
+            </div>
+            <div class="mid_yp1">
+            	<img src="images/733.gif">
+            	<span class="left_zi_3_1_zi"><span class="yellow">《笑忘书》》</span></span></br>
+				<span class="left_zi_3_1_zi"><span class="bule">Leon</span></span></br>
+				<span class="left_zi_3_1_zi">一张不错的专辑！笑忘书，余震都很好听！</span>
+            </div>
+            <div class="mid_yp1">
+            	<img src="images/733.gif">
+            	<span class="left_zi_3_1_zi"><span class="yellow">《每首都是主打~~》</span></span></br>
+				<span class="left_zi_3_1_zi"><span class="bule">lynxmao</span></span></br>
+				<span class="left_zi_3_1_zi">nice!</span>
+            </div>
+        </div>
+        <div id="right"></div>
+        <div id="bottom">
+        <div id="menu_b">
+        	<ul>
+        	<li>首页音乐</li>
+            <li>最新更新</li>
+            <li>栋力推荐</li>
+            <li>栋力排行</li>
+            <li>栋力曲库</li>
+            <li>音乐坊</li>
+            <li>音乐论坛</li>
+            <li>今日排行</li>
+            <li>上传歌曲</li>
+        	</ul>
+        </div>
+        	Copyright©2004-2007 Synx Studio of NetUnion in UESTC Asp.net V2.0</br>
+MusicAdmin@intojoy.com||Admin||令日访问4564次，总访问7458264次</br>
+推荐1024X768分辩率，Internet Explorer版本6.0或以上浏览器浏览本网站 Design By Flying All Rights Reserved. 
+        </div>
+    </div>
+</body>
+</html>
