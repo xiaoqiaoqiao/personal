@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>原型式继承</title>
+    <script type="text/javascript">
+        //原型式继承是对类式继承的一个封装，其实其中的过渡对象就相当于类式继承中的子类，
+        //只不过在原型式中作为一个过渡对象出现的，目的是为了创建返回的新的实例化对象。
+        //所以类式继承中的问题在这里也会出现，不过这种方式由于F过渡类的构造函数中无内容，
+        // 所以开销比较小，使用起来比较方便。如果感觉有必要可以将F过渡类缓存起来，
+        // 不必每次创建一个新的过渡类F。而这种过滤也是不必要的 。
+        // 跟类式继承一样，父类对象book中的值类型的属性被复制，引用类型的属性被共用。
+
+        function inheritObject(o){
+            function F(){ }
+            F.prototype=o;
+            return new F();
+        }
+
+        var book={name:"jsbook",alikeBook:["css","html"]};
+
+        var newBook1=inheritObject(book);
+        newBook1.name="hello";
+        newBook1.alikeBook.push("xml");
+
+        var newBook2=inheritObject(book);
+        newBook2.name="hello11111";
+        newBook2.alikeBook.push("xml1111");
+
+        alert(newBook1.name);
+        alert(newBook1.alikeBook);
+
+        alert(newBook2.name);
+        alert(newBook2.alikeBook);
+
+        alert(book.name);
+        alert(book.alikeBook);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

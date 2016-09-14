@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>各种菜单01</title>
+    <meta name="viewpoint" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/holder.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(this).click(function(){
+                $(this).className("active");
+                $(this).css("background","red");
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>单按钮下拉菜单</h1>
+    <!-- Single button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-hanpopup="true" aria-expanded="false">
+            展开
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">11</a></li>
+            <li><a href="#">22</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">44</a></li>
+        </ul>
+    </div>
+    <h1>导航</h1>
+    <ul class="nav nav-list">
+        <li class="active"><a href="#"><i class="glyphicon-forward glyphicon-white"></i>home</a></li>
+        <li><a href="#"><i class="glyphicon-backward"></i>librrdary</a></li>
+        <li><a href="#"><i class="glyphicon-pencil"></i>application</a></li>
+        <li><a href="#"><i class="i"></i>misc</a></li>
+    </ul>
+    <h1>输入组</h1>
+    <div class="input-group input-group-xs">
+        <span class="input-group-addon" id="basic-addon1">@</span>
+        <input type="text" class="form-control" placeholder="username" aria-describedby="sizing-addon1"/>
+    </div>
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="receipt'user" aria-describedby="basic-addon2"/>
+        <span class="input-group-addon" id="basic-addon2">@qq.com</span>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox" aria-label="...">
+                    </span>
+                    <input type="text" class="form-control" aria-label="...">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            </div>
+            <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <input type="radio" aria-label="...">
+                    </span>
+                    <input type="text" class="form-control" aria-label="...">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span> <input type="text" class="form-control" placeholder="Search for...">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active" ><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+</body>
+</html>

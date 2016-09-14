@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+
+            //children([expr]) 取得一个包含匹配的元素集合中每一个元素的所有子元素的集合。
+            //alert($("#ul1").children().size());
+            //alert($("#ul1").children("li").size());
+
+            //closest(expr|object|element)  1.7开始不建议使用
+
+            //find(expr|obj|ele)搜索所有与指定表达式匹配的元素。
+            //$("#ul1 li").find("ul").css('background','red');
+
+            //next([expr]) 取得一个包含匹配的元素的集合中元素紧邻后面的同辈元素的集合
+            $("div #ul1").next().css('background','red');
+
+            //nextAll([expr]) 查找当前元素之后所有的同辈元素
+
+            //$("div #ul1").nextAll().css('background','red');
+
+            //$("div #ul1").nextAll("p").css('background','red');
+
+            //nextUntil([exp|ele][,fil])查找当前元素之后所有的同辈元素，直到遇到匹配的那个元素为止
+            //$("div #ul1").nextUntil("h1").css('background','red');
+
+            //offsetParent() 返回第一个元素用于定位的父节点
+            /*$("button").click(function(){
+
+             $(this).offsetParent().css("background-color","red");
+
+             });
+             */
+
+
+            //parent([expr]) 取得一个包含着所有匹配元素的唯一父元素集合
+            //$("#first01").parent().css("background-color","red");
+
+            //parents([expr]) 取得不包含根元素的所有匹配的父元素
+            //$("#first01").parents().css("background-color","red");
+            //$("#first01").parents("div").css("background-color","red");
+
+            //parentsUntil([expr|ele|][,filter])查找当前元素的所有的父辈元素，直到遇到匹配的那个元素为止。
+            //$("#first01").parentsUntil("div").css("background-color","red");
+
+            //prev([expr]) 取得一个包含匹配的元素集合中，每一紧邻的同辈前一个的元素集合
+
+            //$("#ul1").prev().css("background-color","red");
+
+            //prevAll([expr])查找当前元素之前所有的同辈元素
+            //$("#ul1").prevAll().css("background-color","red");
+
+            //prevUntil([expr|ele][,filter])
+            //$("#ul1").prevUntil('h2').css("background-color","red");
+
+            //siblings([expr])取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合。可以用可选的表达式进行筛选。
+            //$("#ul1").siblings().css("background-color","red");
+            //$("#ul1").siblings("p").css("background-color","red");
+
+
+
+        });
+
+
+    </script>
+</head>
+<body>
+<div>
+    <h2>直到什么位置</h2>
+    <p>前一个</p>
+    <p>前一个</p>
+    <ul id="ul1">
+        <li id="first01">子元素</li>
+        <li></li>
+        <li>
+            <ul>
+                <li>后代</li>
+                <li>后代</li>
+                <li>后代</li>
+            </ul>
+        </li>
+        <li></li>
+        <li></li>
+
+    </ul>
+    <p>hello</p>
+    <p>hello</p>
+    <h1>hello</h1>
+    <div style="width:70%;position:absolute;left:100px;top:100px">
+        <div style="margin:50px;background-color:yellow">
+            <p>点击下面的按钮可以设置本段落的最近的父（祖先）元素的背景色。</p>
+        </div>
+        <button>点击这里</button>
+    </div>
+</div>
+
+</body>
+</html>

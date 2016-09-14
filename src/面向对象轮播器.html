@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播器</title>
+    <script type="text/javascript">
+        window.onload=function() {
+
+            var div01 = document.getElementById("div01");
+            var btn01=document.getElementById("btn01");
+            var btn02=document.getElementById("btn02");
+            var fadeImg = new FadeLoopImage(["img/1.jpg", "img/2.jpg", "img/4.jpg", "img/5.jpg"],
+                    div01,[btn01,btn02]);
+            fadeImg.changeImage();
+        };
+            var LoopImages = function (imgArr, container) {
+                this.imagesArray = imgArr;//轮播图片组
+                this.container = container;//轮播图片容器
+
+            };
+
+            LoopImages.prototype = {
+                createImage: function () {
+
+                return "create image";
+                },
+                changeImage: function () {
+                    return "change image";
+                }
+            };
+
+            //渐隐切换图片
+            var FadeLoopImage = function (imgArr, container, arrow) {
+                LoopImages.call(this, imgArr, container);
+                this.arrow = arrow;
+            };
+
+            FadeLoopImage.prototype = new LoopImages();
+            FadeLoopImage.prototype.changeImage = function () {
+                var that = this;
+
+                for(var i=0;i<this.imagesArray.length;i++){
+
+                    for (var j = 0; j <this.imagesArray.length; j++) {
+                        that.container.innerHTML+="<img src="+ that.imagesArray[j]+"/>";
+                    }
+
+                    that.container.onmouseover=function(){
+                        that.arrow[0].style.display="block";
+                        that.arrow[1].style.display="block";
+                        that.container.onclick=function(){
+                            return false;
+                        };
+                        that.arrow[0].onclick=function(){
+                            if(that.container.offsetLeft>-(that.imagesArray.length-2)*400){
+                                that.container.style.left=that.container.offsetLeft-250+"px";
+                            }
+                            else{
+
+                            }
+
+                        };
+                        that.arrow[1].onclick=function(){
+                            if(that.container.offsetLeft<0){
+                                that.container.style.left=that.container.offsetLeft+250+"px";
+                            }else{
+
+                            }
+
+                        };
+                    };
+                    that.container.onmouseout=function(){
+                        that.arrow[0].style.display="none";
+                        that.arrow[1].style.display="none";
+//                        that.container.onclick=function(){
+//                            return false;
+//                        };
+                    };
+
+                }
+                that.container.style.width=that.imagesArray.length*400+"px";
+                var timer=null;
+                var count=1;
+                var m=4;
+               timer=setInterval(function(){
+                    if(count<that.imagesArray.length){
+                        that.container.style.left=-count*250+"px";
+                        count++;
+                    }
+                    else{
+                        if(m>0){
+                           --m;
+                           that.container.style.left=-m*250+"px";
+                       }
+                        else{
+                            count=1;
+                            m=4;
+                        }
+                    }
+
+                },2000);
+            };
+
+    </script>
+    <style>
+
+        #btn01{
+            position: absolute;
+            z-index: 2;
+            margin-top:95px ;
+            margin-left: 10px;
+            display: none;
+        }
+        #btn02{
+            position: absolute;
+            z-index: 2;
+            margin-top: 95px;
+            margin-left: 280px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div style="width: 300px;height:200px;margin-top: 50px;position: relative;overflow: hidden;margin-left: 600px;">
+    <div id="btn01"><img src="img/icons-png/arrow-l-black.png" alt=""/></div>
+    <div id="div01" style="position: absolute;z-index: 1;" ></div>
+    <div id="btn02"><img src="img/icons-png/arrow-r-black.png" alt=""/></div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>内置支持的表单控件</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/holder.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <form>
+                <!--
+                placeholder文本框内显示的内容，可擦除
+                如果想让用户选择任意多项，就使用<checkbox>；如果想让用户只选择一项，则使用<radio>：
+                -->
+                <input type="text" placeholder="text input"/>
+                <textarea name="ss" id="ss" cols="30" rows="10"></textarea>
+                <label for="check01" class="checkbox ">
+                    <input type="checkbox" id="check01" value=""/>dewag
+                </label>
+                <label for="optionRadios1" class="radio ">
+                    <input type="radio" name="optionRadios" id="optionRadios1" value="option" checked/>
+                    fwefvvbeg
+                </label>
+                <label for="optionRadios2" class="radio">
+                    <input type="radio" name="optionRadios" id="optionRadios2" value="option1">nklk
+                </label>
+                <!--
+                如果想让多个复选框或单选按钮出现在一行，那么就给它们添加.inline类
+                -->
+                <label for="option1" class="checkbox inline">
+                    <input id="option1" type="checkbox" id="inlineCheckbox1" value="option1"> 1
+                </label>
+                <label for="option2" class="checkbox inline">
+                    <input id="option2" type="checkbox" id="inlineCheckbox2" value="option2"> 2
+                </label>
+                <label for="option3" class="checkbox inline">
+                    <input id="option3" type="checkbox" id="inlineCheckbox3" value="option3"> 3
+                </label>
+                <!--
+
+                建议只在用户对选项很熟悉的情况下使用<select>，如州名或数值。要让用户选择多项，可使用multiple="multiple"：
+                -->
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <select multiple="multiple">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <div class="input-prepend">
+                    <span class="add-on">@</span>
+                        <input class="span2" id="prependedInput" type="text" placeholder="username"/>
+                </div>
+                <div class="input-append">
+                    <input class="span2" id="appendedInput" type="text"/>
+                    <span class="add-on">...</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    </body>
+</html>

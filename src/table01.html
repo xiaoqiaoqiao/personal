@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>表格练习01</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/holder.min.js"></script>
+    </head>
+    <body>
+    <!--
+    .table给每个td上方加边框
+    .table-striped为表格加上条纹背景
+    .table-bordered为所有单元格加上边框，为整个表格加上圆角
+    .table-hover类，此时光标悬停的行会带有浅灰色背景。
+    .table-condensed减少一半的内边距，紧缩表格
+    -->
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <tr class="success">
+                    <td>11</td>
+                    <td>22</td>
+                    <td>33</td>
+                </tr>
+                <!--
+                       类          说明背景             颜色
+                    .success   表示成功或积极的情形       绿
+                    .error     表示危险或消极的情形       红
+                    .warning   表示警告                  黄
+                    .info      用于代替默认样式           蓝
+                -->
+                <tr class="error">
+                    <td>44</td>
+                    <td>55</td>
+                    <td>66</td>
+                </tr>
+                <tr class="warning">
+                    <td>77</td>
+                    <td>88</td>
+                    <td>99</td>
+                </tr>
+                <tr class="info">
+                    <td>77</td>
+                    <td>88</td>
+                    <td>99</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </body>
+</html>

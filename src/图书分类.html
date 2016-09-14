@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>图书管理</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+        #top{
+            width: 380px;
+            height: 30px;
+            background-color:antiquewhite;
+            position: absolute;
+            left: 600px;
+            top: 50px;
+            font-size: 20px;
+        }
+        #content{
+            width: 380px;
+            height: 120px;
+            background-color: beige;
+            position: absolute;
+            left: 600px;
+            top: 80px;
+            display: block;
+        }
+        #content ul{
+            list-style: none;
+        }
+        #content ul li{
+            float: left;
+            width: 100px;
+            height: 25px;
+            margin-left: 20px;
+        }
+        #foot{
+            width: 32px;
+            height: 20px;
+            position: absolute;
+            left: 930px;
+            top: 180px;
+            display: block;
+            text-decoration: underline;
+        }
+    </style>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#top").click(
+                    function(){
+                        if($("#content").is(":visible"))
+                        {
+                            $("#content").hide();
+                            $("#foot").hide();
+                        }
+                        else{
+                                $("#content").show();
+                                $("#foot").show();
+                        }
+                    }
+            );
+            $("#foot").click(function(){
+                if($("#foot").html()=="简化"){
+                    $("#foot").html("更多");
+                    $("#foot").css("top","130px");
+                    $("#content li:gt(4):not(:last)").hide();
+                    $("#content").css("height","72px");
+
+
+                }
+                else{
+                    $("#foot").html("简化");
+                    $("#foot").css("top","180px");
+                    $("#content li:gt(4):not(:last)").show();
+                    $("#content").css("height","120px");
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="top">图书分类</div>
+    <div id="content">
+        <ul>
+            <li>小说(1110)</li>
+            <li>文艺(230)</li>
+            <li>青春(1430)</li>
+            <li>少儿(1560)</li>
+            <li>生活(870)</li>
+            <li>社科(1460)</li>
+            <li>管理(1450)</li>
+            <li>计算机(1780)</li>
+            <li>教育(930)</li>
+            <li>工具书(3450)</li>
+            <li>引进版(980)</li>
+            <li>其他类(3230)</li>
+        </ul>
+    </div>
+    <div id="foot">简化</div>
+</body>
+</html>

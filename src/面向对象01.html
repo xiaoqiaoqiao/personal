@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>面向对象01</title>
+    <script type="text/javascript">
+      function Person(number,name,sex,age){
+          this.number=number;
+          this.name=name;
+          this.sex=sex;
+          this.age=age;
+      }
+        Person.prototype.introduce=function(){
+            alert("大家好，我是"+this.number+this.name);
+        };
+        var p1=new Person(443,"bob","女",20);
+        p1.introduce();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

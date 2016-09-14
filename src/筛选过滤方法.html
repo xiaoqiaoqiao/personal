@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+   
+   $(function() {
+   	     //eq(index|-index)获取第N个元素
+
+   		 //$("#div1 ul li").eq(2).css('background','red');
+   		//索引筛选，如果是整数从0开始，如果是负数在从最后一个开始（1）
+
+   		 //first() 获取第一个元素
+   	     //$("#div1 ul li").first().css('background','red');
+
+   	     //last()  获取最后一个元素
+   	     //$("#div1 ul li").last().css('background','red');
+
+   	     //hasClass(class) 是选择带有类的元素，找到返回true，否则返回false
+   	     //alert($("#div1 ul li").hasClass("first01"));
+
+   	     //filter(expr|obj|ele|fn) 筛选出与指定表达式匹配的元素集合。
+		 //这个方法用于缩小匹配的范围。用逗号分隔多个表达式
+
+		 //$("#div1 ul li").filter(".first01").css('background','red');
+		 //$("#div1 ul li").filter(".first01, :last").css('background','red');
+		 //$("#div1 ul li").filter(":contains('鲜花'),:contains('礼品')").css('background','red');
+
+		 //is(expr|obj|ele|fn)  根据元素检查匹配的元素集合，如果找到至少一个返回true，否则返回false
+
+	     //alert($("#div1 ul li").is(":visible"));
+
+		// map(callback)将一组元素转换成其他数组（不论是否是元素数组）  
+		/* alert( $("li").map(function(){
+		 	return $(this).val();
+		 }).size());
+		 */
+			
+
+		//has(expr|ele) 保留包含特定后代的元素，去掉那些不含有指定后代的元素
+
+		//$("li").has("ul").css("background",'red');
+
+		//not(expr|ele|fn) 删除与指定表达式匹配的元素（反向操作）
+		 //$("li").not(":contains(鲜花)").css("background",'red');
+		 //  $("li").not($("li").has("ul")).css("background",'red');
+        
+		//slice(start,[end])选取一个匹配的子集
+		// $("li").slice(5,8).css("background",'red');
+   	     
+   });
+
+	</script>
+</head>
+<body>
+ 	<div id="div1">
+ 		
+ 		<ul>
+ 			<li class="first01"></li>
+ 			<li></li>
+ 			<li>
+ 				<ul>
+ 					<li>后代</li>
+ 					<li>后代</li>
+ 				</ul>
+ 			</li>
+ 			
+ 			
+ 			<li>鲜花</li>
+ 			<li>礼品</li>
+ 			<li>卡通</li>
+ 			<li>动漫</li>
+ 		</ul>
+ 	</div>
+	
+</body>
+</html>

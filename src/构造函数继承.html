@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>构造函数继承</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            function Person(name){
+                this.books=["java","javascript","html5"];
+                this.name=name;
+            }
+
+            Person.prototype.showBooks=function(){
+                return this.books;
+            };
+
+            function Student(name){
+                Person.call(this,name);
+            }
+
+            var stu1=new Student("汪星人");
+            var stu2=new Student("喵星人");
+
+            stu1.books.push("白雪公主");
+
+            alert(stu1.books);
+            alert(stu1.name);
+
+            alert(stu2.books);
+            alert(stu2.name);
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绘制图像</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oBox=document.getElementById("box");
+            var cxt=oBox.getContext("2d");
+
+            var img=new Image();
+            img.src='images/3841275_122122013392_2_24.gif';
+            //绘制图像
+            img.onload=function(){
+
+                cxt.drawImage(img,200,200,100,100);
+            };
+
+            //图像平铺
+            /*
+            img.onload=function(){
+                var bpat=cxt.createPattern(img,"repeat-x");
+                cxt.fillStyle=bpat;
+                cxt.fillRect(0,0,1000,1000);
+            };
+            */
+            /*img.onload=function(){
+                var bpat=cxt.createPattern(img,"repeat-y");
+                cxt.fillStyle=bpat;
+                cxt.fillRect(0,0,1000,1000);
+            };
+            */
+
+
+            /*img.onload=function(){
+                var bpat=cxt.createPattern(img,"repeat");
+                cxt.fillStyle=bpat;
+                cxt.fillRect(0,0,1000,1000);
+            };
+            */
+
+            //context.clip()只绘制封闭路径区域内的图像，不绘制路径外部图像，用的时候
+            //先创建裁剪区域
+            //再绘制图像（之后绘制的图形都会采用这个裁剪区域，要取消这个裁剪区域就需要用到保存恢复状态
+
+            //cxt.fillStyle="yellow";
+            //cxt.fillRect(0,0,500,500);
+            var img1=new Image();
+            img1.onload=function(){
+              cxt.beginPath();
+                cxt.arc(100,100,50,0,360*Math.PI/180,false);
+                cxt.closePath();
+                cxt.clip();
+                cxt.drawImage(img1,50,50);
+            };
+            img1.src="images/19300534087248134396038528687_950_02.gif";
+            //填充文字
+            /*var txt="填充文字"
+            cxt.fillText(txt,10,10);
+            cxt.font(36px);
+            */
+        };
+    </script>
+</head>
+<body>
+    <canvas id="box" width="1000" height="1000" style="background: #cccccc;"></canvas>
+</body>
+</html>

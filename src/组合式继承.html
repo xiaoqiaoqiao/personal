@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>组合式继承</title>
+    <script type="text/javascript">
+        //父类的构造方法调用了两次
+        window.onload=function(){
+            function Person(name){
+                this.books=["java","javascript","html5"];
+                this.name=name;
+            }
+
+            Person.prototype.getName=function(){
+                return this.name;
+            };
+
+            function Student(name,time){
+                Person.call(this,name);
+                this.time=time;
+            }
+
+            Student.prototype=new Person();
+            Student.prototype.getTime=function(){
+                return this.time;
+            };
+
+            var stu1=new Student("汪星人",2016);
+
+            stu1.books.push("新的一本书");
+            alert(stu1.books);
+            alert(stu1.getName());
+            alert( stu1.getTime());
+
+            var stu2=new Student("喵星人",2017);
+
+            alert(stu2.books);
+            alert(stu2.getName());
+            alert(stu2.getTime());
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>寄生式继承</title>
+    <script type="text/javascript">
+        //声明一个基础对象
+        function inheritObject(o){
+            function F(){}
+            F.prototype=o;
+            return new F();
+        }
+        var book={name:"童话",alikeBook:["一千零一夜","白雪公主"]};
+        function createBook(obj){
+            var o=new inheritObject(obj);
+            o.getName=function(){
+                return name;
+            };
+            return o;
+        }
+        //寄生式继承就是对原型继承的第二次封装，并且在这第二次封装过程中对继承对象进行拓展，
+        // 这样新创建的对象不仅仅有父类中的属性和方法而且还添加新的属性和方法。
+    </script>
+</head>
+<body>
+
+</body>
+</html>

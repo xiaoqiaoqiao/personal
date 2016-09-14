@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>工厂模式</title>
+    <script type="text/javascript">
+        window.onload=function(){
+
+            var Button=function(type,content){
+                if(this instanceof Button){
+                    var btn=new this[type](content);
+                }else{
+                    return new Button(type,content);
+                }
+            };
+
+            Button.prototype={
+               first:function(content){
+                    this.content=content;
+                   (
+                           function(content){
+                               var oBtn=document.createElement("button");
+                               var oDiv=document.createElement("div");
+                               oBtn.innerHTML=content;
+                               oDiv.innerHTML=content;
+                               oBtn.style.width="70px";
+//                             oBtn.style.position="absolute";
+                               oDiv.style.width="208px";
+                               oDiv.style.height="200px";
+                               oDiv.style.position="absolute";
+                               oDiv.style.top="30px";
+                               oDiv.style.border="1px solid  #cccccc";
+                               oDiv.style.float="left";
+                               //oDiv.style.display="block";
+                               document.getElementById("box").appendChild(oBtn);
+                               document.getElementById("box").appendChild(oDiv);
+                               oBtn.onclick=function(){
+                                   oDiv.style.display="none";
+                                   oDiv.style.display="block";
+                               }
+                           }
+                   )(content);
+               },
+                second:function(content){
+                    this.content=content;
+                        (
+                                function(content) {
+                                    var oBtn = document.createElement("button");
+                                    var oDiv = document.createElement("div");
+                                    oBtn.innerHTML = content;
+                                    oDiv.innerHTML = content;
+                                    oBtn.style.width = "70px";
+                                    oDiv.style.width = "208px";
+                                    oDiv.style.height = "200px";
+                                    oDiv.style.position = "absolute";
+                                    oDiv.style.top = "30px";
+                                    oDiv.style.border = "1px solid #cccccc";
+                                    oDiv.style.float = "left";
+                                    oDiv.style.display = "none";
+                                    document.getElementById("box").appendChild(oBtn);
+                                    document.getElementById("box").appendChild(oDiv);
+                                    oBtn.onclick = function () {
+                                        oDiv.style.display="none";
+                                        oDiv.style.display="block";
+                                    }
+                                }
+                        )(content);
+                },
+                third:function(content){
+                    this.content=content;
+                    (
+                            function(content){
+                                var oBtn=document.createElement("button");
+                                var oDiv=document.createElement("div");
+                                oBtn.innerHTML=content;
+                                oDiv.innerHTML=content;
+                                oBtn.style.width="70px";
+                                oDiv.style.width="208px";
+                                oDiv.style.height="200px";
+                                oDiv.style.position="absolute";
+                                oDiv.style.top="30px";
+                                oDiv.style.border="1px solid #cccccc";
+                                oDiv.style.float="left";
+                                oDiv.style.display="none";
+                                document.getElementById("box").appendChild(oBtn);
+                                document.getElementById("box").appendChild(oDiv);
+                                oBtn.onclick=function(){
+                                    oDiv.style.display="none";
+                                    oDiv.style.display="block";
+                                        }
+
+                            }
+                    )(content);
+                }
+            };
+
+            var aBtn=[{type:"first",content:"选项卡1"},
+                      {type:"second",content:"选项卡2"},
+                      {type:"third",content:"选项卡3"}
+                    ];
+
+            for(var i=0;i<3;i++){
+                Button(aBtn[i].type,aBtn[i].content);
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

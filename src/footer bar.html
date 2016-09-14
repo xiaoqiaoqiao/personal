@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>底部工具栏footer bar</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" type="text/css"/>
+    <script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!--
+全屏的固定工具栏，
+给page设置data-fullscreen='true'
+给头部工具栏，尾部工具栏增加data-position=‘fixed’属性
+（这种模式下工具栏会遮住页面的内容，
+所以当工具栏可见时不是全部内容都能看见）
+-->
+    <div data-role="page" data-fullscreen="true">
+        <div data-role="header" data-position="fixed"><h1>欢迎</h1></div>
+        <div data-role="content"><p>helloworld！</p></div>
+        <!--<div data-role="footer">
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="footer%20bar.html" data-role="button" data-icon="plus">add</a>
+                <a href="footer%20bar.html" data-role="button" data-icon="delete">remove</a>
+                <a href="footer%20bar.html" data-role="button" data-icon="select">select</a>
+                <a href="footer%20bar.html" data-role="button" data-icon="arrow-u">up</a>
+                <a href="footer%20bar.html" data-role="button" data-icon="arrow-d">down</a>
+            </div>
+        </div>
+        -->
+        <!--简易的导航栏-->
+        <!--
+        //
+        给导航栏的列表项链接增加data-icon属性，可以给链接设置一个标准的移动网站的图标。给列表项链接增加data-iconpos="top"属性，
+        可以给链接的图标设置位置为在文字上方
+        //
+        导航栏的代码为一个ul列表，被一个容器包裹，这个容器需要有data-role="navbar"属性。要设定某一个链接为活动（selected）状态，
+        给链接增加class="ui-btn-active" 即可。我们给尾部栏设置了一个导航栏，把one项设置为活动状态
+        -->
+
+        <!--<div data-role="footer" data-inline="true">
+            <div data-role="navbar" data-inline="true">
+                <ui  data-iconpos="top">
+                    <li><a href="footer%20bar.html" class="ui-btn-active">one</a></li>
+                    <li><a href="footer%20bar.html" >two</a></li>
+                </ui>
+            </div>
+        </div>
+        -->
+        <div data-role="footer" data-position="fixed">
+            <h4>haha</h4>
+        </div>
+    </div>
+</body>
+</html>

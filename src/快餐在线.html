@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+        #box{
+            width: 500px;
+            height: 500px;
+            background: antiquewhite;
+            position: relative;
+            margin-top: 100px;
+            margin-left: 600px;
+        }
+       h1{
+            position: absolute;
+            margin-left: 780px;
+            margin-top: -40px;
+        }
+        div{
+            margin-top:10px;
+            margin-left: 50px;
+        }
+        .number{
+           width: 25px;
+        }
+        p{
+            display: block;
+            margin-top: 10px;
+            margin-left: 50px;
+        }
+        .change{
+
+            background-color: red;
+        }
+
+    </style>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script>
+            $(function(){
+                $("#hamburger input:checkbox").click(function(){
+                    //$("#hamburger input[type='checkbox']").prop("disabled",false);
+                   $('#hamburger input:checkbox').each(function(i,val){
+                       var $ham=val.value;
+                   })
+
+
+                });
+            });
+            $(function(){
+                    $("#snack input:checkbox").click(function(){
+                       // $("#snack input[type='checkbox']").prop("disabled",false);
+                    });
+            });
+            $(function(){
+                    $("#meat input:checkbox").click(function(){
+                       // $("#meat input[type='checkbox']").prop("disabled",false);
+                    });
+            });
+            $(function(){
+                    $("#drink input:checkbox").click(function(){
+                        //$("#drink input[type='checkbox']").prop("disabled",false);
+                    });
+            });
+           /* $(function() {
+                $("input[type='checkbox']").prop({disabled: true});
+            });
+          */
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>快餐在线</h1>
+    <div id="box">
+        <div>
+            1.<input type="checkbox" id="hamburger" value="汉堡" /><label for="hamburger">汉堡</label>
+            <input type="text" class="number" value="">￥<span>5</span>元/个
+            <br/>
+            <div class="content">
+                <label><input type="checkbox" name="ham" value="" />牛肉堡</label>
+                <label><input type="checkbox" name="ham" value=""/>超级鸡腿堡</label>
+                <label><input type="checkbox" name="ham" value=""/>香辣鸡腿堡</label>
+                <label><input type="checkbox" name="ham" value=""/>至珍七虾堡</label>
+            </div>
+        </div>
+
+        <div>
+            2.<input type="checkbox" id="snack" value="小吃" /><label for="snack">小吃</label>
+            <input type="text" class="number" value="">￥<span>3</span>元/份
+            <br/>
+            <div class="content">
+                <label><input type="checkbox" name="food"  />薯条</label>
+                <label><input type="checkbox" name="food" />甜甜圈</label>
+                <label><input type="checkbox" name="food" />布丁</label>
+            </div>
+        </div>
+
+        <div>
+            3.<input type="checkbox" id="meat" value="肉类" /><label for="meat">肉类</label>
+            <input type="text" class="number" value="">￥<span>4</span>元/份
+            <br/>
+            <div class="content">
+                <label><input type="checkbox" name="meal" />炸鸡腿</label>
+                <label><input type="checkbox" name="meal" />炸鸡翅</label>
+                <label><input type="checkbox" name="meal" />奥尔良烤鸡翅</label>
+                <label><input type="checkbox" name="meal" />鸡米花</label>
+            </div>
+        </div>
+        <div>
+            4.<input type="checkbox" id="drink" value="饮料" /><label for="drink">饮料</label>
+            <input type="text" class="number" value="">￥<span>3</span>元/杯
+            <br/>
+            <div class="content">
+                <label><input type="checkbox" name="meal"  />可乐</label>
+                <label><input type="checkbox" name="meal" />橙汁</label>
+                <label><input type="checkbox" name="meal" />咖啡</label>
+                <label><input type="checkbox" name="meal" />牛奶</label>
+            </div>
+        </div>
+        <p>总计：<input type="text" value="" id="money" /><label for="money">元</label></p>
+    </div>
+</body>
+</html>

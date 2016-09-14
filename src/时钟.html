@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <script type="text/javascript">
+        window.onload=function(){
+            var cans=document.getElementById("box");
+            var cxt=cans.getContext("2d");
+            var timer=null;
+
+
+
+
+            cxt.beginPath();
+            cxt.lineWidth=1;
+            cxt.strokeStyle="red";
+            cxt.arc(300,300,200,0,360*Math.PI/180,true);
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.translate(300,300);
+
+            //刻度
+            for(var i=0;i<12;i++) {
+                //cxt.save();
+                //将起始点定位到圆心
+               // cxt.translate(300, 300);
+                //设置刻度的样式
+                cxt.lineWidth = 10;
+                cxt.strokeStyle = "#999999";
+                //设置旋转角度
+                cxt.rotate(30 * Math.PI / 180);
+                cxt.beginPath();
+                cxt.moveTo(180,0 );
+                cxt.lineTo(200,0);
+               /* cxt.font = "normal 20px 宋体";
+                cxt.textAlign = "left";
+                cxt.textBaseline = "top";
+                cxt.strokeText(i, i * (-50) * Math.PI / 180, -150);
+                */
+                cxt.closePath();
+                cxt.stroke();
+                //cxt.restore();
+            }
+
+            //分刻度
+            for(var j=0;j<60;j++){
+                //cxt.save();
+
+                cxt.lineWidth=4;
+                cxt.strokeStyle="#999999";
+                cxt.rotate(6*Math.PI/180);
+                cxt.beginPath();
+                cxt.moveTo(190,0);
+                cxt.lineTo(200,0);
+                cxt.closePath();
+                cxt.stroke();
+               // cxt.restore();
+            }
+
+            //圆心
+           cxt.beginPath();
+            cxt.arc(0,0,5,0,360*Math.PI/180,false);
+            cxt.fillStyle="#ccc";
+            cxt.strokeStyle="#ccc";
+            cxt.fill();
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.lineWidth=2;
+            cxt.strokeStyle="red";
+            cxt.moveTo(-25,0);
+            cxt.lineTo(185,0);
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.lineWidth=3;
+            cxt.strokeStyle="#999999";
+            cxt.moveTo(0,-20);
+            cxt.lineTo(0,175);
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.lineWidth=3;
+            cxt.strokeStyle="#999999";
+            cxt.moveTo(10,0);
+            cxt.lineTo(-165,0);
+            cxt.stroke();
+            cxt.closePath();
+
+        };
+
+    </script>
+</head>
+<body>
+    <canvas id="box" width="1000" height="700"></canvas>
+</body>
+</html>

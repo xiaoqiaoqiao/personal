@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>表单01</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/holder.min.js"></script>
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+            <!--
+            关于form
+            为<form>标签添加.form-search类，
+                   再给<input>添加.search-query类，然后就可以创建一个圆角输入框加一个行内提交按钮的搜索表单
+                .form-inline让所有表单元素都出现在一行，而且标签也都显示在旁边
+            -->
+           <!-- <form class="form-search form-inline">
+                <input type="text" class="search-query"/>
+                <input type="text" class="input-small" placeholder="用户名"/>
+                <input type="password " class="input-small" placeholder="密码"/>
+                <label class="checkbox">
+                    <input type="checkbox" />我同意
+                </label>
+                <button type="submit" class="btn">注册</button>
+            </form>
+            -->
+            <!--
+                横向表单
+                创建横向布局的表单的步骤：
+                1.为form元素添加.form-horizontal类，
+                2.把成对的标签和元素包装在类.control-group的div中
+                 即为label和他所对应的input添加类为.control-group的div
+                3.为其中每个标签添加.control-label类
+                  即为label标签添加class=“control-label”
+                4.把每个控件包装在一个类为.controls的div中，以便对齐
+                  即为input添加类为.controls的div
+            -->
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label for="email" class="control-label">email</label>
+                    <div class="controls">
+                        <input type="text" id="email" placeholder="email"/>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label for="password" class="control-label">password</label>
+                    <div class="controls">
+                        <input type="password" id="password" placeholder="password"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label">
+                            <input type="checkbox" id="agree"/>I can not more agree.
+                        </label>
+                    </div>
+                    <div class="controls">
+                            <button type="submit" class="btn">log in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </body>
+</html>

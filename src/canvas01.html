@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>canvas绘画练习</title>
+    <style type="text/css">
+        *{
+            margin:0px;
+            padding:0px;
+            border:0px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var cans=document.getElementById("cans");
+            var cxt=cans.getContext("2d");//当前对象绘画环境
+            cxt.lineWidth=2;
+            cxt.strokeStyle="greenyellow";
+
+            //cxt.lineCap="round";
+
+            //画线
+            cxt.beginPath();
+            cxt.moveTo(0,0);
+            cxt.lineTo(67,67);
+            cxt.stroke();
+            cxt.closePath();
+
+            //实心矩形
+            cxt.beginPath();
+            cxt.fillRect(20,20,20,20);//==cxt.rect(40,40,20,20);          cxt.fill();
+            cxt.closePath();
+
+
+            //矩形
+            cxt.fillStyle="green";
+            cxt.beginPath();
+            cxt.rect(40,40,20,20);
+            cxt.stroke();
+            cxt.fill();
+            cxt.closePath();
+
+
+            //圆弧
+            cxt.beginPath();
+            cxt.arc(67,67,11,0,360*Math.PI/180,true);
+            cxt.stroke();
+            cxt.fillStyle="red";
+            cxt.fill();
+            cxt.closePath();
+
+            //擦除矩形
+            cxt.beginPath();
+            cxt.rect(76,76,20,20);
+            cxt.stroke();
+            cxt.fillStyle="aqua";
+            cxt.fill();
+            cxt.clearRect(82,82,8,8);
+            cxt.closePath();
+            //cp2x第二个控制点x坐标
+            //cpy2第二个控制点y坐标
+            //x终点x坐标
+            //y终点y坐标
+            //绘制二次样条曲线cxt.quadraticCurveTo(qcpx,qcpy,qx,qy)
+                //qcpx:二次样条曲线控制点x坐标
+                //qcpy:二次样条曲线控制点y坐标
+                //qx:二次样条曲线控制点x坐标
+                //qy:二次样条曲线控制点y坐标
+                cxt.moveTo(100,100);
+                cxt.bezierCurveTo(100,100,100,150,150,150);
+                cxt.stroke();
+                cxt.quadraticCurveTo(150,200,200,200);
+                cxt.stroke();
+
+            //线性渐变 var lg=cxt.createLinearGradient(xstart,ystart,xend,yend);
+            //线性渐变颜色 lg.addcolorstop(offfset,color);
+        };
+    </script>
+</head>
+<body>
+    <canvas id="cans" width="800" height="800">
+        你的浏览器不支持，请下载高版本浏览器或更换其他浏览器！
+    </canvas>
+</body>
+</html>
