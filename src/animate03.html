@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ div{  width:50px;
+ 		height:50px;
+		background:#F30;
+		animation:yundong   5s cubic-bezier(0.8,0.5,0.3,0.6),
+				  yundong1  5s ease-in 3s,
+				  yundong2  5s ease-out; 
+		}
+
+ @keyframes yundong{
+	 0% { margin:50px;}
+	  10% { margin:100px;}
+	   20% { margin:150px;}
+	    30% { margin:200px;}
+		40% { margin:250px;}
+		 50% { margin:300px;}
+	   60% {  margin:350px;}
+	    70% { margin:400px;}
+	    80% { margin:450px;}
+		90% { margin:500px;}
+		100% { margin:550px;}
+	 
+	 }
+@keyframes yundong1{
+	 		0% { margin:750px;}
+	 	 10% { margin:600px;}
+	  	 20% { margin:550px;}
+	    30% { margin:400px;}
+		40% { margin:350px;}
+		 50% { margin:200px;}
+	   60% { margin:350px;}
+	    70% { margin:400px;}
+	    80% { margin:450px;}
+		90% { margin:500px;}
+		100% { margin:550px;}
+	 
+	 }
+@keyframes yundong2{
+	 0%{ transform:rotate(35deg);}
+	 20%{ transform:rotate(75deg);}
+	 40%{ transform:rotate(105deg);}
+	 60%{ transform:rotate(135deg);}
+	 80%{ transform:rotate(170deg);}
+	 100%{ transform:rotate(210deg);}
+	}
+</style>
+</head>
+
+<body>
+<div></div>
+</body>
+</html>

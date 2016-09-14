@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{  margin:0px;
+	padding:0px;
+	border:0px;}
+	
+body{ font-family:Verdana, Geneva, sans-serif;
+	  font-size:16px;
+	  color:#000;}
+
+/* */
+
+#menu { width:800px;
+		height:300px;
+		border:1px solid #F00;
+		padding:50px;
+		
+		 }
+
+#menu ul{ list-style:none;}
+
+#menu ul li { width:100px;
+			  height:100px;
+			  line-height:45px;
+			  border-radius:50px;
+			  margin-bottom:5px;
+			  background:#F90;
+			  text-align:center;
+			  float:left;
+			  }
+#menu ul a { text-decoration:none;
+			display:block;}
+
+#menu ul a:link{color:#3C0;}
+#menu ul a:visited{color:#609;}
+#menu ul a:hover{ background:#963;}
+#menu ul a:active{color:#F30; }
+/*样式的优先级*/
+行内样式>ID>类
+	  
+</style>
+</head>
+
+<body>
+	<div id="menu" >
+    	<ul>
+        	<li><a href="#">首页1</a></li>
+            <li><a href="#">首页2</a></li>
+            <li><a href="#">首页3</a></li>
+            <li><a href="#">首页4</a></li>
+            <li style="border:0px;"><a href="#">首页5</a></li>
+        </ul>
+    </div>
+</body>
+</html>

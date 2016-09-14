@@ -1,0 +1,334 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+   body{
+	   margin:0px;
+	   padding:0px;
+	   background:#333;
+	   }
+	   #box{
+		   width:600px;
+		   height:800px;
+		   /*background:#CFF;*/
+		   margin:auto;
+		   overflow:hidden;
+		   }
+	      #design{
+			   width:388px;
+			   height:89px;
+			   background:url(images/94501.png);
+			   margin-top:50px;
+			   margin-left:120px;
+			   }
+		  #card01{
+			  -webkit-border-shadow:5px 5px 5px #999;
+			  width:150px;
+			  height:508px;
+			  background:url(images/card_bg.jpg);
+			  position:absolute;
+			  border-radius:10px;
+			  border:1px solid #ccc;
+			  border-shadow:5px 5px 5px #999;
+			  margin-top:80px;
+			  margin-left:80px;
+			  float:left;
+			  z-index:1;
+			  transform-origin:left,bottom;
+			  transform:rotate(-20deg);
+			  opacity:1;
+			  }
+			  #card01 h1{
+				  display:block;
+				  position:absolute;
+				  margin-left:30px;
+				  }
+               #card01 img{
+				   width:130px;
+				   height:130px;
+				   background:#CCC;
+				   opacity:1;
+				   border:1px solid #999;
+				   border-radius:10px;
+				   margin-left:9px;
+				   margin-top:60px;
+				   }
+				 #card01 p{
+					 display:block;
+					 margin-top:25px;
+					 margin-left:10px;
+					 line-height:29px;
+					 font-size:12px;
+					 }
+				 #card01:hover{
+					 z-index:4;
+					 transition-duration:0.8s;
+					 transform:scale(1.1,1.1) rotate(-22deg);
+					 color:#000;
+					 }
+		 #card02{
+			  -webkit-border-shadow:2px 2px 2px #999;
+			  width:150px;
+			  height:508px;
+			  background:url(images/card_bg.jpg);
+			  position:absolute;
+			  border-radius:10px;
+			  border:1px solid #ccc;
+			  border-shadow:2px 2px 2px #999;
+			  margin-top:62px;
+			  margin-left:140px;
+			  float:left;
+			  z-index:2;
+			  transform-origin:left,bottom;
+			  transform:rotate(-10deg);
+			
+			  }
+			  #card02 h1{
+				  display:block;
+				  position:absolute;
+				  margin-left:30px;
+				  }
+               #card02 img{
+				   width:130px;
+				   height:130px;
+				   background:#CCC;
+				   opacity:1;
+				   border:1px solid #999;
+				   border-radius:10px;
+				   margin-left:9px;
+				   margin-top:60px;
+				   }
+				 #card02 p{
+					 display:block;
+					 margin-top:25px;
+					 margin-left:10px;
+					 line-height:29px;
+					 font-size:12px;
+					 }
+				 #card02:hover{
+					 z-index:4;
+					  transition-duration:0.8s;
+					 transform:scale(1.1,1.1) rotate(-12deg);
+					 color:#000;
+					 }
+		 #card03{
+			  -webkit-border-shadow:2px 0px 2px #999;
+			  width:150px;
+			  height:508px;
+			  background:url(images/card_bg.jpg);
+			  position:absolute;
+			  border-radius:10px;
+			  border:1px solid #ccc;
+			  border-shadow:2px 0px 2px #999;
+			  margin-top:55px;
+			  margin-left:220px;
+			  float:left;
+			  z-index:3;
+			  transform-origin:left,bottom;
+			  /*transform:rotate(-10deg);*/
+			
+			  }
+			  #card03 h1{
+				  display:block;
+				  position:absolute;
+				  margin-left:30px;
+				  }
+               #card03 img{
+				   width:130px;
+				   height:130px;
+				   background:#CCC;
+				   opacity:1;
+				   border:1px solid #999;
+				   border-radius:10px;
+				   margin-left:5px;
+				   margin-top:60px;
+				   }
+				 #card03 p{
+					 display:block;
+					 margin-top:25px;
+					 margin-left:10px;
+					 line-height:29px;
+					 font-size:12px;
+					 }
+				 #card03:hover{
+					 z-index:4;
+					 transition-duration:0.8s;
+					 transform:scale(1.1,1.1);
+					 /*transform:rotate(-8deg);*/
+					 color:#000;
+					 }
+		#card04{
+			 -webkit-border-shadow:5px 5px 5px #F00;
+			  width:150px;
+			  height:508px;
+			  background:url(images/card_bg.jpg);
+			  position:absolute;
+			  border-radius:10px;
+			  border:1px solid #ccc;
+			  border-shadow:5px 5px 5px #F06;
+			  margin-top:62px;
+			  margin-left:290px;
+			  float:left;
+			  z-index:2;
+			  transform-origin:right,bottom;
+			  transform:rotate(10deg);	
+			  }
+			  #card04 h1{
+				  display:block;
+				  position:absolute;
+				  margin-left:30px;
+				  }
+               #card04 img{
+				   width:130px;
+				   height:130px;
+				   background:#CCC;
+				   opacity:1;
+				   border:1px solid #999;
+				   border-radius:10px;
+				   margin-left:9px;
+				   margin-top:60px;
+				   }
+				 #card04 p{
+					 display:block;
+					 margin-top:25px;
+					 margin-left:10px;
+					 line-height:29px;
+					 font-size:12px;
+					 }
+				 #card04:hover{
+					 z-index:4;
+					 transition-duration:0.8s;
+					 transform:scale(1.1,1.1) rotate(12deg);
+					 color:#000;
+					 }
+		 #card05{
+			  -webkit-border-shadow:2px 0px 2px #999;
+			  width:150px;
+			  height:508px;
+			  background:url(images/card_bg.jpg);
+			  border-radius:10px;
+			  border:1px solid #ccc;
+			  border-shadow:2px 0px 2px #999;
+			  position:absolute;
+			  margin-top:80px;
+			  margin-left:352px;
+			  float:left;
+			  z-index:1;
+			  transform-origin:left,bottom;
+			  transform:rotate(20deg);
+			  }
+			  #card05 h1{
+				  display:block;
+				  position:absolute;
+				  margin-left:30px;
+				  }
+               #card05 img{
+				   width:130px;
+				   height:130px;
+				   background:#CCC;
+				   opacity:1;
+				   border:1px solid #999;
+				   border-radius:10px;
+				   margin-left:9px;
+				   margin-top:60px;
+				   }
+				 #card05 p{
+					 display:block;
+					 margin-top:25px;
+					 margin-left:10px;
+					 line-height:29px;
+					 font-size:12px;
+					 }
+				 #card05:hover{
+					 z-index:4;
+					 transition-duration:0.8s;
+					 transform:scale(1.1,1.1) rotate(22deg);
+					 color:#000;
+					 }
+</style>
+</head>
+
+<body>
+<div id="box">
+    <div id="design"></div>
+    <div id="card01">
+        <h1>卡片1</h1>
+        <img src="images/t9tuqui_trans.png">
+        <p>姓名:大嘴鸟
+        <br/>
+        年龄:5岁
+        <br/>
+        身高:50cm
+        <br/>
+        体重:600g
+        <br/>
+        食物:水果
+        <br/>
+        巨嘴鸟生活在南部和中部地区，并且喜爱到处飞</p>
+    </div>
+    <div id="card02">
+        <h1>卡片2</h1>
+        <img src="images/t9foxy_trans.png">
+        <p>姓名:狐狸
+        <br/>
+        年龄:3岁
+        <br/>
+        身高:70cm
+        <br/>
+        体重:5.5kg
+        <br/>
+        食物:肉类
+        <br/>
+        狐狸生活在北半球，喜爱寻求刺激和隐藏</p>
+    </div>
+    <div id="card03">
+        <h1>卡片3</h1>
+        <img src="images/t9dog2_trans.png">
+        <p>姓名:狗
+        <br/>
+        年龄:8岁
+        <br/>
+        身高:120cm
+        <br/>
+        体重:10kg
+        <br/>
+        食物:骨头
+        <br/>
+        狗喜欢生活在狗屋里，爱好咀嚼运动鞋，树皮和去散步</p>
+    </div> 
+    <div id="card04">
+        <h1>卡片4</h1>
+        <img src="images/t9penguino_trans.png">
+        <p>姓名:企鹅
+        <br/>
+        年龄:20岁
+        <br/>
+        身高:110cm
+        <br/>
+        体重:35kg
+        <br/>
+        食物:鱼
+        <br/>
+        企鹅生活在寒冷和冰冷的地方，喜欢游泳和潜水</p>
+    </div>
+   
+    <div id="card05">
+        <h1>卡片5</h1>
+        <img src="images/t9lion_trans.png">
+        <p>姓名:狮子
+        <br/>
+        年龄:12岁
+        <br/>
+        身高:190cm
+        <br/>
+        体重:180kg
+        <br/>
+        食物:肉类
+        <br/>
+        狮子生活在非洲，爱睡觉，有时也会用一天的时间狩猎</p>
+    </div>
+</div>
+</body>
+</html>  

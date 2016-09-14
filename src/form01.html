@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--action 值 本表单的数据提交给谁的处连接处理程序，jsp servlet理对象
+   method  提交数据方式：post 批量提交（隐式的，安全）  get 字符串的提交方式，在浏览器地址中是显示的
+   表单元素：input  非input方式
+   1、文本框：功能是接收输入的数据,单行文本框
+   2、密码框：功能是接收数据，以掩码的形式显示。
+   3、多行文本：功能可以接收多行数据
+   4、按钮：功能：确定，单击，普通按钮、提交按钮、重置按钮
+   5、单选按钮：功能：只能选择一个
+   6、复选框：功能：可以任意选择
+   7、下拉框：选择
+   8、隐藏域：
+   -->
+<form action="" method="post" >
+	<input type="text" name="userName" maxlength="6" size="50"  value="userName" required><br>
+    <input type="password" name="password" maxlength="10" size="20">
+    <textarea rows="10" cols="50" name="address"></textarea>
+    <input type="button" value="普通按钮" onClick="alert('a');">
+    <input type="submit" value="登录">
+    <input type="reset">
+    <input type="radio" value="男" name="sex" checked>男
+    <input type="radio" value="女" name="sex" >女
+    
+    <input type="checkbox" name="check01" value="游泳">游泳
+    <input type="checkbox" name="check01" value="阅读">阅读
+    <input type="checkbox" name="check01" value="舞蹈">舞蹈
+    <input type="checkbox" name="check01" value="上网">上网
+    
+    <select multiple  name="date">
+    	<option value="1980">1980</option>
+        <option value="1981">1981</option>
+        <option value="1982">1982</option>
+        <option value="1983">1983</option>
+        <option value="1984">1984</option>
+    </select>
+    
+    <input type="hidden" value="A">
+    <input type="color">
+    <input type="date">
+    <input type="email">
+    <input type="file">
+    <input type="image">
+    <input type="number">
+    <input type="range">
+    <input type="search">
+    <input type="tel">
+    <input type="url">
+</form>
+</body>
+</html>

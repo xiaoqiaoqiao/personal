@@ -1,0 +1,69 @@
+﻿body{
+	margin:0px;
+	padding:0px;
+	background:url(images/1101.gif);
+	background-repeat:repeat-x;
+	}
+ #box{
+	 width:1003px;
+	 height:1068px;
+	 background:#CFF;
+	 margin:auto;
+	 }
+	 /*顶部样式*/
+	 #top{
+		 width:1003px;
+		 height:40px;
+		 border:1px solid #000;
+		 }
+	 #topLeft img{
+		 width:144px;
+		 height:28px;
+		 margin-top:12px;
+		 margin-left:50px;
+		 float:left;
+		 }
+	 #topRight{
+		 width:317px;
+		 height:22px;
+		 background:url(images/1102.gif);
+		 margin-left:350px;
+		 margin-top:15px;
+		 float:left;
+		 border-radius:5px;
+		 }
+		 #topRight ul{
+			 margin-left:-36px;
+			 margin-top:5px;
+			 list-style:none;
+			 }
+		 #topRight li{
+			 font-size:9px;
+			 float:left;
+			 }
+	#menu{
+		width:1003px;
+		height:83px;
+		background:url(images/1103.gif);
+		}
+	     #cosmetic img{
+			 width:65px;
+			 height:15px;
+			 margin-top:10px;
+			 margin-left:85px;
+			 float:left;
+			 }
+		 #handbag img{
+			 width:65px;
+			 height:15px;
+			 margin-top:10px;
+			 margin-left:85px;
+			 float:left;
+			 }
+		  #watch img{
+			 width:65px;
+			 height:15px;
+			 margin-top:10px;
+			 margin-left:85px;
+			 float:left;
+			 }
